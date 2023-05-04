@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BirthdayComingSoon.in</title>
+    <script src="https://kit.fontawesome.com/8f8533be60.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "poppins", sans-serif;
+            box-sizing: border-box;
+            filter: contrast(1.1);
+        }
+
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background: url(caterina-berger-ETGJjk9o-48-unsplash.jpg);
+            background-position: center;
+            background-size: contain;
+            padding: 0.8%;
+        }
+        
+        .container a{
+            position: absolute;
+            top: 40px;
+            right: 30px;
+        }
+
+        .wish {
+            position: absolute;
+            display: none;
+            top: 50%;
+            right: 0;
+            font-size: 30px;
+            color: #fff;
+            text-shadow: 2px 2px 0 rgb(243, 42, 42), 4px 4px 0 #282727, 6px 6px 0 #1e1b10;
+            text-transform: uppercase;
+            letter-spacing: 2.72px;
+            font-weight: bold;
+            transform: scale(0.94);
+            animation: scale 10s infinite cubic-bezier(0.4, 1, 0.89, 1);
+        }
+
+        @keyframes scale {
+            0% {
+                bottom: 0;
+                transform: scale(0);
+            }
+
+            100% {
+                top: 40%;
+                transform: scale(1);
+            }
+        }
+
+        .logo {
+            width: 120px;
+            margin: 0 20px;
+            cursor: pointer;
+        }
+
+        .content {
+            width: 100vw;
+            position: absolute;
+            top: 15%;
+            left: 15%;
+            color: #fff;
+            text-transform: capitalize;
+            font-family: 'Ubuntu', sans-serif;
+
+        }
+
+        .content p {
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+
+        .content h1 {
+            font-weight: 670;
+            font-size: 45px;
+            letter-spacing: 0.55px;
+        }
+
+        .content h1 span {
+            color: #ff3753;
+        }
+
+        .content button {
+            margin: 10px auto;
+            padding: 6px 10px;
+            font-weight: 400;
+            background: transparent;
+            color: #fccb8b;
+            border: 2px solid #ffef;
+            border-radius: 5px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .launch-time {
+            display: flex;
+            margin: 20px 0;
+        }
+
+        .launch-time div {
+            /* flex-basis: 100px; */
+            margin-right: 20px;
+        }
+
+        .launch-time div p {
+            font-size: 60px;
+        }
+
+        .launch-time div span {
+            margin-left: 4px;
+        }
+
+        .baloon {
+            width: 100px;
+            position: absolute;
+            right: 15%;
+            bottom: 0;
+            animation: baloon 4s linear infinite;
+        }
+
+        @keyframes baloon {
+            0% {
+                bottom: 0%;
+                opacity: 0;
+            }
+
+            100% {
+                bottom: 105%;
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 990px) {
+            .wish {
+                top: 80%;
+                bottom: 0;
+                right: 10px;
+                font-size: 30px;
+                animation: scale 5s infinite cubic-bezier(0.4, 1, 0.89, 1);
+            }
+
+            @keyframes scale {
+                0% {
+                    top: 100%;
+                    transform: scale(0);
+                }
+
+                100% {
+                    bottom: 10%;
+                    transform: scale(1);
+                }
+            }
+
+            .content {
+                top: 20%;
+                left: 10%;
+            }
+
+            .launch-time {
+                margin: 100px;
+                width: 80vw;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .container {
+                background-size: cover;
+                background-position: bottom 0;
+            }
+
+            .wish {
+                width: 80vw;
+                top: 60%;
+                left: 20px;
+                font-size: 25px;
+                text-align: center;
+                animation: scale 10s infinite cubic-bezier(0.4, 1, 0.89, 1);
+            }
+
+            .content {
+                top: 25%;
+                left: 10%;
+            }
+
+            .content p {
+                font-size: 15px;
+                letter-spacing: 3px;
+            }
+
+            .content h1 {
+                font-size: 35px;
+                min-width: 80%;
+                letter-spacing: 0.5px;
+            }
+
+            .launch-time {
+                margin: 10px 0;
+                width: 80vw;
+                overflow: hidden;
+            }
+
+            .launch-time div p {
+                font-size: 4rem;
+                font-weight: bolder;
+                margin-top: 12rem;
+            }
+
+            .content button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body >
+    <div class="container">
+        <a href="Countdown-Landing-Page.html"><i class="fa-solid fa-house fa-xl" style="color: #fafcff;"></i></a>
+        <img src="vecteezy_golden-luxury-birthday-text_11653314_906.png" alt="birthdaylogo" class="logo" />
+        <span id="wish" class="wish"></span>
+        <div class="content">
+            <p>the birthday remider mini app</p>
+            <h1>your <span>birthday</span> countdown<span> start..</span></span></h1>
+            <div class="launch-time">
+                <div>
+                    <p class="day">00</p>
+                    <span>Days</span>
+                </div>
+
+                <div>
+                    <p class="hour">00</p>
+                    <span>Hours</span>
+                </div>
+
+                <div>
+                    <p class="minute">00</p>
+                    <span>Minutes</span>
+                </div>
+
+                <div>
+                    <p class="second">00</p>
+                    <span>Seconds</span>
+                </div>
+            </div>
+            <button type="button">Learn More..</button>
+        </div>
+        <img src="vecteezy_color-glossy-balloons-background-png-illustration_8477305_294.png" class="baloon"
+            alt="baloon" />
+    </div>
+    <script src="Countdown.js"></script>
+</body>
+
+</html>
